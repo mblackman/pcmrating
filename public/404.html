@@ -4,64 +4,139 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
+  .scroll {
+    background-color: rgb(204, 204, 204);
+    position: absolute;
+    right: 0px; top: 80px; bottom: 0px;
+    width: 20px;
   }
-
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
+  .siteinput {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: 2px solid rgb(204, 204, 204);
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    width: 600px; height: 100%;
   }
-
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  .addressbar {
+    background-color: rgb(235, 235, 235);
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 40px;
+    width: 100%;
   }
-
+  .Exitbutton {
+    background-color: rgb(245, 124, 108);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 40px;
+    width: 128px;
+  }
+  .Exitbutton:hover {
+    background-color: rgb(255, 217, 217);
+  }
+  .Tabbar {
+    background-color: rgb(204, 204, 204);
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 40px;
+    width: 100%;
+  }
+  .Power {
+    border-radius: 50%;
+    height: 15px; width: 15px; background-color: rgb(91, 195, 244);
+    position: absolute;
+    bottom: 3px; right: 25px;
+  }
+  .Power:hover {
+    background-color: rgb(217, 253, 255);
+  }
+  .Screen {
+    height: auto; width: auto;
+    min-width: 600px;
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px; left: 20px; bottom: 20px; right: 20px;
+  }
+  .Monitor {
+    border-radius: 20px;
+    height: auto; width: auto; background-color: rgb(10, 13, 15);
+    padding: 20px;
+    min-width: 640px;
+    min-height: 480px;
+    margin: auto;
+    position: absolute;
+    top: 10px; left: 10px; bottom: 10px; right: 10px;
+  }
+  .webpage {
+    background-color: rgb(255, 255, 255);
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+  }
   h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
+    position: absolute;
+    top: 126px;
+    right: 0px;
+    left: 0px;
+    color: rgb(55, 55, 55);
+    font-family: Impact;
+    margin: 0px;
+    text-align: center;
+    font-size: 256px;
   }
-
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  p {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    left: 0px;
+    font-family: Lucida Sans Unicode;
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-size: 18px;
+    margin: 30px 0px;
+  }
+  p#bot {
+    top: 375px;
+  }
+  .monitorstand {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    background-color: black;
+    width: 200px; height: 20px;
   }
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  <div class="Monitor" >
+    <div class="Screen" >
+      <div class="firefox">
+        <div class="Tabbar">
+          <div class="Exitbutton"></div>
+        </div>
+        <div class="addressbar">
+          <div class="siteinput"></div>
+        </div>
+      </div>
+      <div class="webpage">
+        <p>The page you were looking for doesn't exist.</p>
+        <p id="bot">May Gaben have mercy on us all.</p>
+        <h1>404</h1>
+        <div class="scroll"></div>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <div class="Power" ></div>
+    <div class="monitorstand"></div>
   </div>
 </body>
 </html>
